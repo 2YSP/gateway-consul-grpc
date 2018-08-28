@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: gateway-consul
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      discovery:
+        register-health-check: false
+    gateway:
+      default-filters:
+      - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+      routes:
+        - id: consul-client
+          uri: lb://consul-client
+          predicates:
+            - Path=/test/**
+          filters:
+          - StripPrefix=1
+server:
+  port: 9000

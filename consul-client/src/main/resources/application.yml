@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: consul-client
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        egister-health-check: false
+#        health-check-interval: 5s
+#        instance-id: ${spring.application.name}-${random.value}
+server:
+  port: 8081
