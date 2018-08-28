@@ -1,6 +1,7 @@
 # gateway-consul-grpc
 this is a example of using Spring Cloud gateway,Spring Cloud Consul and gRPC
 # 1.下载代码
+git clone https://github.com/2YSP/gateway-consul-grpc.git
 # 2.启动consul
 windows：打开cmd，输入命令 consul agent -dev
 # 3.启动gateway-consul,consul-client,consul-server
